@@ -1,3 +1,47 @@
 #content {
     display: flex;
+    justify-content: center;
+    column-gap: 50px;
+}
+.card {
+    border: 5px, 5px, 5px, 5px;
+}
+.btn{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cardBtn {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+#searchCard {
+    height: 755px;
+    width: 710px;
+}
+#savedSearches {
+    width: 410px;
+}
+p {
+    margin-left: 5px;
+}
+#weatherDisplay {
+    display: flex;
+    align-items: center;
+    column-gap: 70px;
+}
+.savedText {
+    color: white;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(#fff3e0, #ff9800);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#weatherIcon {
+    height: 300px;
+    width: 300px;
 }

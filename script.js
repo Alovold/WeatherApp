@@ -11,6 +11,8 @@ let saveBtn = document.querySelector("#saveBtn")
 let currentCitySearch = "";
 let currentStateSearch = "";
 
+weatherDisplay.style.visibility = "hidden";
+
 
 
 
@@ -48,11 +50,8 @@ function weatherFetch(lat, lon) {
         weatherTemp.textContent = `Current Temp: ${tempImperial} Degrees Fahrenheit`;
         let mainWeather = data.weather[0].description;
         let iconId = data.weather[0].icon;
-        if (weatherIcon.hidden) {
-            weatherIcon.removeAttribute("hidden");
-        }
-        if (saveBtn.hidden){
-            saveBtn.removeAttribute("hidden");
+        if (weatherDisplay.style.visibility == "hidden") {
+            weatherDisplay.style.visibility = "visible";
         }
         weatherIcon.src = `https://openweathermap.org/img/wn/${iconId}@4x.png`
         weatherType.textContent = `Current weather: ${mainWeather}`;
@@ -88,9 +87,18 @@ class SelectedAreas {
         newCardRemove.addEventListener("click", ()=> this.removeArea(newArea.id));
         newCardRecall.addEventListener("click", ()=> locationFetch(cityInput, stateInput));
         newCard.id = `card${newArea.id}`;
-        newCard.class = `card`;
-        newCardRecall.class = `button`;
-        newCardRemove.class = `button`;
+        newCard.classList.add("card");
+        newCard.classList.add("blue-grey");
+        newCardArea.classList.add(`savedText`);
+        newCardTime.classList.add(`savedText`);
+        newCardRecall.classList.add(`waves-effect`);
+        newCardRecall.classList.add(`waves-light`);
+        newCardRecall.classList.add(`btn`);
+        newCardRecall.classList.add(`cardBtn`);
+        newCardRemove.classList.add(`waves-effect`);
+        newCardRemove.classList.add(`waves-light`);
+        newCardRemove.classList.add(`btn`);
+        newCardRemove.classList.add(`cardBtn`);
         newCard.appendChild(newCardArea);
         newCard.appendChild(newCardTime);
         newCard.appendChild(newCardRecall);

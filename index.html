@@ -9,12 +9,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Weather Search</title>
   </head>
   <body>
     <div id="content">
       <div id="searchCard">
-        <h1>Weather App</h1>
+        <h1>Weather Search</h1>
         <form id="inputForm">
           <label for="cityInput">City</label>
           <input type="text" id="cityInput" />
@@ -75,19 +75,22 @@
 
           <!-- <label for="stateInput">State</label>
           <input type="text" id="stateInput" /> -->
-          <button type="submit" id="submitBtn" class="button">Submit</button>
+          <button type="submit" id="submitBtn" class="btn">Submit</button>
         </form>
-        <div id="weatherDisplay">
-          <h2 id="weatherDisplayTitle"></h2>
+        <h2 id="weatherDisplayTitle"></h2>
+        <div id="weatherDisplay" class="card blue lighten-4">
+          <div>
           <p id="weatherTypeDisplay"></p>
           <p id="tempDisplay"></p>
+          <button type="button" id="saveBtn" class="btn" display="none">Save Current Search</button>
+          </div>
+          <div>
           <img
             id="weatherIcon"
             src=""
             alt="Image depicting current weather"
-            hidden
           />
-          <button type="button" id="saveBtn" class="button" hidden>Save Current Search</button>
+          </div>
         </div>
       </div>
       <div id="savedSearches">
