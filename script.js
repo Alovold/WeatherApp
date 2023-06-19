@@ -18,7 +18,7 @@ weatherDisplay.style.visibility = "hidden";
 
 function locationFetch(cityName, stateCode) {
     //event.preventDefault();
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode}&limit=5&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode}&limit=5&appid=${apiKey}`)
     .then((response)=>{
         const result = response.json();
         console.log(result);
